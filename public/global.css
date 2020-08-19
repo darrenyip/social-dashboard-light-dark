@@ -1,0 +1,119 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: "Inter", Helvetica, sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	color: currentColor;
+	text-decoration: none;
+}
+/* - Lime Green: hsl(163, 72%, 41%)
+- Bright Red: hsl(356, 69%, 56%)
+
+- Facebook: hsl(208, 92%, 53%)
+- Twitter: hsl(203, 89%, 53%)
+- Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+- YouTube: hsl(348, 97%, 39%) */
+
+/* light */
+/* - White (BG): hsl(0, 0%, 100%)
+- Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
+- Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
+- Dark Grayish Blue (Text): hsl(228, 12%, 44%)
+- Very Dark Blue (Text): hsl(230, 17%, 14%) */
+:root{
+	--white:hsl(0, 0%, 100%);
+
+	/* top bg pattern */
+	--very-pale-blue:hsl(0, 0%, 100%);
+	/* card-bg */
+	--light-grayish-blue:hsl(225, 100%, 98%);
+	/* text */
+	--dark-grayish-blue:hsl(228, 12%, 44%);
+	/* text */
+	--very-dark-blue:hsl(230, 17%, 14%);
+
+	--hover-bg-light:#E1E4F0;
+
+
+	/* bg */
+	--very-dark-blue-bg:hsl(230, 17%, 14%); 
+	/* top bg pattern */
+	--very-dark-blue:hsl(232, 19%, 15%);
+	/* card bg */
+	--dark-desaturated-blue:hsl(228, 28%, 20%);
+	/* text */
+	--desaturated-blue:hsl(228, 34%, 66%);
+
+	--hover-bg-dark:#333A55;
+}
+.light{
+	--bg:var(--white);
+	--bg-top-pattern:var(--very-pale-blue);
+	--card-bg:var(--light-grayish-blue);
+	--text-1:var(--dark-grayish-blue);
+	--text-2:var(--very-dark-blue);
+	--hover:var(--hover-bg-light);
+}
+/* - Very Dark Blue (BG): hsl(230, 17%, 14%)
+- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
+- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
+- Desaturated Blue (Text): hsl(228, 34%, 66%)
+- White (Text): hsl(0, 0%, 100%) */
+.dark{
+	--bg:var(--very-dark-blue-bg);
+	--bg-top-pattern:var(--very-dark-blue);
+	--card-bg:var(--dark-desaturated-blue);
+	--text-1:var(--desaturated-blue);
+	--text-2:var(--white);
+	--hover:var(--hover-bg-dark);
+}
+body{
+	color: var(--text-1);
+	background-color: var(--bg);
+	transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
